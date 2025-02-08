@@ -173,8 +173,15 @@ main p {
     margin-left: 20px;
 }
 
-.aboutLeft img {
+.aboutLeft > img {
     width: 75%;
+    animation: fade-in linear;
+    animation-timeline: view();
+}
+
+@keyframes fade-in {
+    0% {scale: .5; opacity: 0;}
+    100% {scale: 1; opacity: 1;}
 }
 
 .aboutRight {
@@ -203,14 +210,43 @@ main p {
 .contactButton,
 .skillButton,
 .galleryButton {
-    padding: 15px 20px;
-    border: none;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    padding: 5px 16px;
+    font-size: .8rem;
+    font-weight: 600;
+    line-height: 20px;
+    vertical-align: middle;
+    border: 1px solid;
     border-radius: 3px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #12bbf3;
-    color: #fff;
+    color: #000;
+    background-color: #fafbfc;
+    border-color: #000;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+    transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property: color, background-color, border-color;
+    text-transform: uppercase;
 }
+.contactButton:hover,
+.skillButton:hover,
+.galleryButton:hover {
+        color: #ffffff;
+        background-color: #12bbf3;
+        border-color: #12bbf3;
+        box-shadow: rgba(27, 31, 35, 0.1) 0px 1px 0px 0px, rgba(255, 255, 255, 0.03) 0px 1px 0px 0px inset;
+        transition-duration: 0.1s;
+}
+
+.skillButton {
+    color: #fff;
+    border-color: #fff;
+}
+
+
+
+
+
 
 
 
@@ -225,10 +261,21 @@ main p {
     background-size: cover;
     background-position: right;
     width: 100%;
-    height: 750px;
+    height: 800px;
     z-index: 3;
     position: relative;
     margin-bottom: 150px;
+    animation: breath 5s linear infinite;
+    background-color: #000;
+}
+
+@keyframes breath {
+    0% {
+        background-size: 108% auto;
+    }
+    100% {
+        background-size: 100% auto;
+    }
 }
 
 .skills h2 {
@@ -236,21 +283,42 @@ main p {
     letter-spacing: .03rem; 
     width: 50%;
     color: #fff;
-    margin: 40px 0 0 20px;
+    margin-top: 160px;
+    align-self: flex-end;    
+    animation: slide-in 1.2s forwards;
 }
 
+@keyframes slide-in {
+    
+    100% {
+        margin-top: 40px;
+    }
+}
+
+
+
+
 .skillButtonContainer {
-    margin-left: 20px;
+    align-self: center;
 }
 
 .skillButton {
     margin: 0 5px 40px 0;
     background-color: #0303034d;
-    /* backdrop-filter: blur(.2rem); */
+    border-color: #0303034d;
+    color: #c9c6c6;
+}
+
+.skillButton:hover {
+    background-color: #0303034d;
+    color: #12bbf3;
 }
 
 .skillButtonActive {
     background-color: #12bbf3;
+    border-color: #12bbf3;
+    opacity: .9;
+    color: #fff;
 }
 
 
@@ -272,7 +340,7 @@ main p {
 }
 .galleryTitle,
 .workTitle {
-    font-size: 12svw;
+    font-size: 9svw;
     margin-left: -5px;
 }
 
@@ -301,16 +369,14 @@ main p {
 }
 
 .gallery {
-    margin: 0 20px;
-    background-color: #000;
+    margin: 0 20px 150px 20px;
     position: relative;
     z-index: 3;
     display: flex;
     justify-content: center;
     overflow-y: hidden;
     overflow-x: hidden;
-    height: 1000px;
-    margin-bottom: 150px;
+    height: 1060px;
     max-width: 1512px;
 }
 
@@ -319,11 +385,11 @@ main p {
     flex-direction: column;
     justify-content: center;
     width: 20%;
-    margin-right: 10px;
+    margin-right: 8px; 
 }
 
 .galleryRow img {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 
@@ -345,39 +411,6 @@ main p {
     z-index: 3;
     max-width: 1512px;
     margin: 0 auto;
-}
-
-.workLeft {
-    width: 30%;
-    margin-top: 38px;
-}
-
-.workLeft img {
-    width: 95%;
-    margin-left: 20px;
-}
-
-.workRow {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0;
-    border-bottom: 1px solid gainsboro;
-    margin-left: 19px;
-}
-
-.workOne {
-    padding-top: 0;
-}
-
-.workRow img {
-    width: 25px;
-    height: 35px;
-    align-self: center;
-}
-
-.workRight {
-    width: 70%;
-    margin-right: 20px;
 }
 
 
