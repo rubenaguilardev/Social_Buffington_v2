@@ -68,3 +68,20 @@ function skillButton() {
 skillButton();
 setInterval(changeSkillsSection, 8000);
 
+
+const instagramPrev = document.getElementById("instagramPrevBtn");
+const instagramNext = document.getElementById("instagramNextBtn");
+const list = document.getElementById("instagramItemList");
+const itemWidth = 340;
+const padding = 10;
+
+instagramPrev.addEventListener('click', function() {
+    list.scrollLeft -= (itemWidth + padding); 
+    buttonAnimation(instagramPrev)  
+});
+
+instagramNext.addEventListener('click', function() {
+    list.scrollLeft += (itemWidth + padding);
+    buttonAnimation(instagramNext)
+});
+

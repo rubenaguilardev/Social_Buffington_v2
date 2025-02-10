@@ -243,7 +243,9 @@ main p {
 
 .contactButton,
 .skillButton,
-.galleryButton {
+.galleryButton,
+.instagramPrevBtn, 
+.instagramNextBtn {
     display: inline-block;
     outline: 0;
     cursor: pointer;
@@ -263,7 +265,9 @@ main p {
     text-transform: uppercase;
 }
 .contactButton:hover,
-.galleryButton:hover {
+.galleryButton:hover,
+.instagramPrevBtn:hover, 
+.instagramNextBtn:hover {
         color: #ffffff;
         background-color: #12bbf3;
         border-color: #12bbf3;
@@ -399,7 +403,7 @@ main p {
 }
 .galleryTitle,
 .workTitle {
-    font-size: 9svw;
+    font-size: 12svw;
     margin-left: -5px;
 }
 
@@ -416,8 +420,7 @@ main p {
     width: 50%;
 }
 
-.mottoRight,
-.workRight{
+.mottoRight{
     font-size: 2.8rem;
     margin: 30px 0 50px 0;
     z-index: 3;
@@ -435,7 +438,7 @@ main p {
     justify-content: center;
     overflow-y: hidden;
     overflow-x: hidden;
-    height: 1380px;
+    height: 1370px;
     max-width: 1512px;
     background-color: #000;
 }
@@ -477,11 +480,6 @@ main p {
     margin-bottom: 40px;
 }
 
-.expertiseCarousel span {
-    font-style: italic;
-    color: #fff;
-    font-weight: 300;
-}
 
 .expertiseCarousel .carouselInner {
     width: max-content;
@@ -514,7 +512,117 @@ main p {
 
 
 
-/* INSTAGRAM SECTION */
+/* TESTIMONIAL SECTION */
+
+.testimonials {
+    position: relative;
+    z-index: 3;
+}
+
+.testimonialHeading {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: .03em;
+}
+
+.testimonialBorder {
+    height: 150px;
+    border-bottom: 1px solid gainsboro;
+    margin: 0 20px;
+}
+
+.testimonialsLeft {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+.testimonialsLeft h2 {
+    font-size: 2.8rem;
+    line-height: 110%;
+}
+
+.testimonialContainer {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    margin: 50px 20px 150px 20px;
+}
+
+.testimonial {
+    width: 50%;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.testimonialText {
+    background-color: #000000ab;
+    color: #fff;
+    width: 80%;
+    height: 40%;
+    margin-bottom: 74px;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 2px;
+    padding-bottom: 25px;
+    letter-spacing: .03em;
+}
+
+.rightTestimonial {
+    height: 69%;
+    padding-bottom: 25px;
+    margin-bottom: 70px;
+
+}
+
+.person {
+    font-size: 1.8rem;
+    padding: 25px 0 10px 25px;
+}
+
+.person a {
+    color: #12bbf3;
+}
+
+.personTitle {
+    padding: 0 0 15px 25px;
+    font-size: 1.1rem;
+}
+
+.personQoute {
+    padding: 0 25px 0 25px;
+    line-height: 130%;
+}
+
+
+
+
+
+
+
+.testimonial.one {
+    background-image: url("../images/testimonials/1.png");
+    background-position: bottom;
+    background-size: cover;
+    margin-right: 20px;
+
+}
+
+.testimonial.two {
+    background-image: url("../images/testimonials/3.png");
+    background-position: bottom;
+    background-size: cover;
+}
+
+
+
+
+
+/* WORK SECTION */
 
 .workHeading {
     display: flex;
@@ -525,13 +633,132 @@ main p {
     margin-left: 0;
 }
 
+.workMotto {
+    font-size: 2.8rem;
+    margin: 30px 0 50px 0;
+    z-index: 3;
+    position: relative;
+    font-weight: 500;
+    line-height: 110%;
+    margin-left: 20px;
+}
+
 .workContainer {
-    display: flex;
     position: relative;
     z-index: 3;
-    max-width: 1512px;
-    margin: 0 auto;
 }
+
+.workSection {
+    display: flex;
+}
+
+.instagramMain {
+    display: flex;
+    flex-direction: column;
+    width: 66.33%;
+}
+
+.instagramCover {
+    width: 33.33%;
+    height: 1345px;
+    background-image: url("../images/work/instagramcover.jpg");
+    background-size: cover;
+}
+
+.instagramInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.instagramInfoTop {
+    width: 100%;
+    display: flex;
+}
+
+.instagramInfoBottom {
+    width: 100%;
+    display: flex;
+}
+
+.igInfoImage {
+    width: 60%;
+}
+
+.igInfoText {
+    font-family: "Open Sans", sans-serif;
+    height: 40%;
+    padding: 20px;
+    line-height: 130%;
+    letter-spacing: .03rem;
+}
+
+.igInfoImage img {
+    width: 100%;
+}
+
+.bottomImage {
+    margin-top: -40px;
+    width: 48%;
+}
+
+.bottomText p {
+    width: 50%;
+    margin-left: 50%;
+}
+
+
+
+
+.instagramItemList {
+   display: flex;
+   scroll-behavior: smooth;
+   overflow: hidden;
+   scroll-snap-type: x mandatory;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+   margin: 20px 15px 0 20px;
+}
+
+.instagram-media {
+   flex: 0 0 49.8%;
+   scroll-snap-align: start;
+}
+
+.instagramScrollButons,
+.blogScrollButtons {
+   background-color: #fff;
+   display: flex;
+   justify-content: space-between;
+   padding: 5px 20px 20px 20px ;
+}
+
+.instagramPrevBtn,
+.instagramNextBtn {
+  padding: 10px 15px;
+}
+
+.instagramNextBtn {
+
+}
+
+
+.darkPressed {
+   box-shadow: 0 3px 4px 0 gainsboro;
+   opacity: 0.5;
+}
+
+
+.instagramItemList::-webkit-scrollbar {
+   display: none;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+
+
+
 
 
 
