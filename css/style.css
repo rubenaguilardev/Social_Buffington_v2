@@ -650,19 +650,40 @@ main p {
 
 .workSection {
     display: flex;
+    
+}
+
+.workContainerRight {
+    width: 66.66%;
+}
+
+
+
+.instagramCover {
+    width: 33.66%;
+    height: 1330px;
+    background-image: url("../images/work/instagramcover.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.facebookCover {
+    height: 665px;
+    background-image: url("../images/work/facebookcover.png");
+    background-size: cover;
+}
+
+.blogCover {
+    height: 665px;
+    background-image: url("../images/work/blogcover.png");
+    background-size: cover;
 }
 
 .instagramMain {
     display: flex;
     flex-direction: column;
     width: 66.33%;
-}
-
-.instagramCover {
-    width: 33.33%;
-    height: 1345px;
-    background-image: url("../images/work/instagramcover.jpg");
-    background-size: cover;
+    display: none;
 }
 
 .instagramInfo {
@@ -726,28 +747,15 @@ main p {
    scroll-snap-align: start;
 }
 
-.instagramScrollButons,
-.blogScrollButtons {
+.instagramScrollButons {
    background-color: #fff;
    display: flex;
    justify-content: space-between;
-   padding: 5px 20px 20px 20px ;
-}
-
-.instagramPrevBtn,
-.instagramNextBtn {
-  padding: 10px 15px;
-}
-
-.instagramNextBtn {
-
+   padding: 5px 20px 0 20px ;
 }
 
 
-.darkPressed {
-   box-shadow: 0 3px 4px 0 gainsboro;
-   opacity: 0.5;
-}
+
 
 
 .instagramItemList::-webkit-scrollbar {
@@ -755,6 +763,24 @@ main p {
    justify-content: space-between;
    flex-wrap: wrap;
 }
+
+.facebookMain {
+    display: none;
+    margin: 20px 20px 0 20px;
+}
+
+.facebookTop {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
