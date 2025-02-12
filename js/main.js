@@ -30,15 +30,9 @@ const mottos = [
 let index = 0;
 
 function changeSkillsSection() {
-    backgroundImage.classList.add("black");
-    setTimeout(() => {
-        backgroundImage.style.setProperty('background-image', `url(${images[index]})`);
-        skillsText.innerHTML = mottos[index];
-        skillsTextSlide()
-        setTimeout(() => {
-            backgroundImage.classList.remove("black");
-        }, 100);
-    }, 50);
+    backgroundImage.style.setProperty('background-image', `url(${images[index]})`);
+    skillsText.innerHTML = mottos[index];
+    skillsTextSlide()
     index = (index + 1) % images.length;
 }
 
