@@ -27,7 +27,7 @@ const mottos = [
     "<span>Food and Beverage</span> presented with irresistible charm and delicious detail"
 ];
 
-let index = 0;
+let index = 1;
 
 function changeSkillsSection() {
     backgroundImage.style.setProperty('background-image', `url(${images[index]})`);
