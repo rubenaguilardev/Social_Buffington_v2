@@ -406,6 +406,11 @@ main p {
     border-bottom: 1px solid gainsboro;
     line-height: 0.85;
 }
+
+.galleryPageHeading {
+    margin-top: 80px;
+}
+
 .galleryTitle,
 .workTitle {
     font-size: 12svw;
@@ -535,8 +540,16 @@ main p {
 .galleryRow {
     display: flex;
     flex-direction: column;
-    width: 24.8%;
+    width: 25%;
     margin-right: 8px; 
+}
+
+.rightRow {
+    margin-right: 0;
+}
+
+.galleryRow.galleryPage {
+    width: 33.33%;
 }
 
 .galleryRow img {
@@ -1008,6 +1021,14 @@ footer a,
     padding: 20px 0 0 20px;
 }
 
+.footerLogoContainer {
+   margin: 70px 20px 0 20px;
+}
+
+.footerLogo {
+    width: 100%;
+}
+
 .footerLinks {
     display: flex;
     justify-content: space-between;
@@ -1034,7 +1055,10 @@ footer a,
 }
 
 
-
+.galleryBody {
+    background-color: #000;
+    color: #fff;
+}
 
 
 
