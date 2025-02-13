@@ -11,6 +11,7 @@ window.addEventListener("scroll", function() {
 });
 
 
+
 let backgroundImage = document.querySelector(".skills");
 let skillsText = document.querySelector(".skillsText");
 let skillsButtons = document.querySelectorAll(".skillButton");

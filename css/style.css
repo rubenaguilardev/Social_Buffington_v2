@@ -129,12 +129,12 @@ main p {
     font-size: 1.1rem;
     color: #fff;
     padding: 0 20px 0 0;
-    opacity: 0;
+    opacity: 1;
     margin-right: -100vw;
     margin-bottom: 50px;
-    animation: slidefade 3s forwards;
     font-weight: 600;
     font-family: "Open Sans", sans-serif;
+    animation: slidefade 3s forwards;
 }
 
 @keyframes slidefade {
@@ -469,7 +469,9 @@ main p {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
+    -ms-transition: all 1s ease;coverSection img {
+        width: 10%;
+    }
     transition: all 1s ease;
     cursor: pointer;
 }
@@ -752,12 +754,47 @@ main p {
 .workContainer {
     position: relative;
     z-index: 3;
+    background-color: #000;
 }
 
 .workSection {
     display: flex;
+    color: #fff;
     
 }
+
+.coverSection {
+    display: flex;
+}
+
+.smicon {
+    display: flex;
+    justify-content: center;
+}
+
+.smicon.ig {
+    margin-top: 200px;
+}
+
+.smicon.fb {
+    margin: 0 60px 65px 0;
+}
+
+.smicon.bp {
+    margin: 0 0 60px 60px;
+}
+
+.smicon img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.coverSection h2 {
+    font-size: 5svw;
+}
+
+
 
 .workContainerRight {
     width: 66.66%;
@@ -767,22 +804,34 @@ main p {
 
 .instagramCover {
     width: 33.66%;
-    height: 1330px;
-    background-image: url("../images/work/instagramcover.jpg");
+    height: 1340px;
+    background-image: url("../images/work/igcover.png");
     background-size: cover;
     background-position: bottom;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+.coverSection:hover{
+    opacity: .7;
+    cursor: pointer;
 }
 
 .facebookCover {
     height: 665px;
-    background-image: url("../images/work/facebookcover.png");
+    background-image: url("../images/work/fbcover.png");
     background-size: cover;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
 }
 
 .blogCover {
     height: 665px;
-    background-image: url("../images/work/blogcover.png");
+    background-image: url("../images/work/bpcover.png");
     background-size: cover;
+    align-items: flex-end;
 }
 
 .instagramMain {
