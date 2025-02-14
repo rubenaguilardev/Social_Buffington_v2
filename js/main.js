@@ -29,12 +29,27 @@ const mottos = [
 ];
 
 let index = 1;
+let currentActiveIndex = 0;
+let interval;
 
 function changeSkillsSection() {
     backgroundImage.style.setProperty('background-image', `url(${images[index]})`);
     skillsText.innerHTML = mottos[index];
+    
     skillsTextSlide()
+
+    skillsButtons[currentActiveIndex].classList.remove("skillButtonActive");
+    currentActiveIndex = index;
+    skillsButtons[currentActiveIndex].classList.add("skillButtonActive");
+
     index = (index + 1) % images.length;
+}
+
+
+function resetBreathingAnimation() {
+    backgroundImage.style.animation = 'none';
+    void backgroundImage.offsetWidth;
+    backgroundImage.style.animation = 'breath 16s infinite';
 }
 
 
@@ -45,23 +60,30 @@ function skillsTextSlide() {
     skillsText.classList.add("skillsTextSlideIn");
 }
 
-function skillButton() {
+function skillButton() {   
     skillsButtons.forEach(function(button, buttonIndex) {
         button.addEventListener('click', function() {
-            index = buttonIndex - 1;
+            skillsButtons[currentActiveIndex].classList.remove("skillButtonActive");
+
+            currentActiveIndex = buttonIndex;
+            button.classList.add("skillButtonActive");
+
+            index = buttonIndex;
             changeSkillsSection();
-            button.classList.add("skillButtonActive")
-            console.log(button, buttonIndex)
+            
+            clearInterval(interval);
+            interval = setInterval(changeSkillsSection, 8000);
+            
+            resetBreathingAnimation();
         })
 
     })
+    skillsButtons[0].classList.add("skillButtonActive");
 }
 
 
-
-
+interval = setInterval(changeSkillsSection, 8000);
 skillButton();
-setInterval(changeSkillsSection, 8000);
 
 
 const instagramPrev = document.getElementById("instagramPrevBtn");
@@ -122,3 +144,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('inView');
+        return;
+      }
+      entry.target.classList.remove('inView');
+    });
+  });
+
+  const allAnimatedElements = document.querySelectorAll('.animate');
+  allAnimatedElements.forEach((element) => observer.observe(element));
+}); 
