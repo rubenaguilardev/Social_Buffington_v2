@@ -94,12 +94,10 @@ const padding = 10;
 
 instagramPrev.addEventListener('click', function() {
     list.scrollLeft -= (itemWidth + padding); 
-    buttonAnimation(instagramPrev)  
 });
 
 instagramNext.addEventListener('click', function() {
     list.scrollLeft += (itemWidth + padding);
-    buttonAnimation(instagramNext)
 });
 
 
@@ -154,7 +152,7 @@ const observer = new IntersectionObserver(entries => {
         entry.target.classList.add('inView');
         return;
       }
-      entry.target.classList.remove('inView');
+    
     });
   });
 
