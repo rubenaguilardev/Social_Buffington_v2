@@ -34,8 +34,8 @@
         </section>
     </main>
     
-    
-    <div id="about" class="aboutHeader animate">
+    <div class="aboutAnchor" id="about"></div>    
+    <div class="aboutHeader animate">
         <p class="aboutTitle">Who am I?</p>
         <div class="aboutHeading animate">
             <h2>
@@ -64,8 +64,8 @@
         </div>
     </section>
 
-    <section class="skills">
-        <h2 class="skillsText skillsTextSlideIn"><span>Creative Storytelling</span> crafted to captivate and inspire</h2>
+    <section class="skills skillsSection">
+        <h2 class="skillsText skillsTextMedia skillsTextSlideIn"><span>Creative Storytelling</span> crafted to captivate and inspire</h2>
         <div class="skillButtonContainer">
             <button class="skillButton skillButtonActive">1</button>
             <button class="skillButton">2</button>
@@ -137,7 +137,7 @@
         <div class="testimonialBorder"></div>
         <div class="testimonialsLeft">
             <p class="testimonialHeading">Testimonials</p>
-            <div class="testimonialsHeading">
+            <div class="testimonialsHeading testHeading">
                 <h2>Read what my colleagues</h2>
                 <h2>have to say</h2>
             </div>   
@@ -161,20 +161,23 @@
         
         <div class="testimonial two">
             <div class="testimonialText rightTestimonial">
-                <h2 class="person"><a href="https://www.linkedin.com/in/annie-tang-humphrey-32a7349/">Annie Humphrey</a></h2>
-                <p class="personTitle">Chief Operating Officer</p>
-                <p class="personQoute">
-                    "I had the privilege of working with Jazmin for over a decade. The first few years 
-                    where we worked side by side, I knew Jazmin’s tenacity, creativity, and hunger for 
-                    learning will always make her one of the best assets on any team she joins. It was 
-                    rewarding to see her grow from a Part-Time Consultant to a Guest Service Manager, to a 
-                    Community Manager, and then step into a Social Media Manager Role. She is not only fun to 
-                    teach, she also possesses higher thrust to drive results than many others! When she stepped 
-                    into the leadership role, she embraced that career milestone by leading with empathy and 
-                    confidence. Jazmin is a rare find, a total package that has the drive, the grit, the 
-                    creativity, the vision, the passion, and loyalty that makes her a key element for her team's 
-                    success! PS- Her culinary talent is an exquisite added bonus!" 
-                </p>
+                <div class="testimonionalPerson">
+                    <h2 class="person"><a href="https://www.linkedin.com/in/annie-tang-humphrey-32a7349/">Annie Humphrey</a></h2>
+                    <p class="personTitle">Chief Operating Officer</p>
+                    <p class="personQoute">
+                        "I had the privilege of working with Jazmin for over a decade. The first few years 
+                        where we worked side by side, I knew Jazmin’s tenacity, creativity, and hunger for 
+                        learning will always make her one of the best assets on any team she joins. It was 
+                        rewarding to see her grow from a Part-Time Consultant to a Guest Service Manager, to a 
+                        Community Manager, and then step into a Social Media Manager Role. She is not only fun to 
+                        teach, she also possesses higher thrust to drive results than many others! When she stepped 
+                        into the leadership role, she embraced that career milestone by leading with empathy and 
+                        confidence. Jazmin is a rare find, a total package that has the drive, the grit, the 
+                        creativity, the vision, the passion, and loyalty that makes her a key element for her team's 
+                        success! PS- Her culinary talent is an exquisite added bonus!" 
+                    </p>
+                </div>
+               
                 
             </div>
            
@@ -269,13 +272,35 @@
                     </section> 
                 </details>
                 
-            
-                <div class="blogCover coverSection">
-                    <div class="smicon bp">
-                        <img src="images/bglogo.png" alt="">
-                        <h2>Blog Posts</h2>
-                    </div>
-                </div>
+                <details class="bpDetails">
+                    <summary class="bpSummary">
+                        <div class="blogCover coverSection">
+                            <div class="smicon bp">
+                                <img src="images/bglogo.png" alt="">
+                                <h2>Blog Posts</h2>
+                            </div>
+                        </div>
+                    </summary>
+                    <section class="blogMain">
+                        <a href="https://blog.coldwellbanker.com/6-home-decor-styles-engagement-rings-match/"><div class="blogContainer">
+                            <img src="images/work/Coldwell+Banker.png" alt="blog image 1">
+                            <p>6 Home Décor Styles and Engagement Rings to Match</p>
+                        </div></a>
+                        <a href="https://engaged.robbinsbrothers.com/7-essential-tips-on-how-to-propose"><div class="blogContainer">
+                            <img src="images/work/Coldwell+Banker-2.png" alt="blog image 1">
+                            <p>7 Essential Tips On How To Propose</p>
+                        </div></a>
+                        <a href="https://engaged.robbinsbrothers.com/5-times-you-should-remove-your-ring"><div class="blogContainer">
+                            <img src="images/work/Coldwell+Banker-3.png" alt="blog image 1">
+                            <p>5 Times You Should Remove Your Ring </p>
+                        </div></a>
+                        <a href="https://engaged.robbinsbrothers.com/jewelry-gift-ideas-for-every-kind-of-woman"><div class="blogContainer">
+                            <img src="images/work/Coldwell+Banker-4.png" alt="blog image 1">
+                            <p>Jewelry Gift Ideas For Every Kind of Woman</p>
+                        </div></a>
+                    </section>
+                </details>
+                
             </div>
             
             
@@ -317,12 +342,12 @@
                 </div>
             </div>
             <div class="contactInfoRight">
-                <form action="#">
+                <form action="mailto:ragui56@wgu.edu" method="post" enctype="text/plain">
                     <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio eum atque itaque</h2>
                     <input type="text" maxlength="30px" placeholder="Your Name">
                     <input type="email" maxlength="30px" placeholder="Your Email">
                     <textarea name="message" cols="40" rows="6" id="message" placeholder="Your Message"></textarea>
-                    <input class="formButton" type="SUBMIT">
+                    <input class="formButton" type="SUBMIT" value="Send">
                 </form>
             </div>
         </div> 

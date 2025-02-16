@@ -159,7 +159,7 @@ main p {
 .aboutTitle {
     font-size: 1rem;
     line-height: 120%;
-    margin: 8rem 0  0 1.25rem;
+    margin: 4rem 0  0 1.25rem;
     z-index: 3;
     position: relative;
 }
@@ -274,7 +274,28 @@ main p {
         transition-duration: 0.1s;
 }
 
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .aboutHeading h2 {
+        font-size: 2.4rem;
+    };
+}
 
+
+@media (max-width: 1200px) {
+    .aboutHeading h2 {
+        font-size: 2rem;
+    };
+
+    .skillsText.skillsTextMedia {
+        font-size: 2.4rem;
+    }
+
+    .skills.skillsSection {
+        height: 48rem;
+    }
+
+    
+}
 
 
 
@@ -383,6 +404,23 @@ main p {
 
 /* GALLERY SHOWCASE SECTION */
 
+
+@media (max-width: 1200px) {
+    .galleryMotto .mottoRight {
+        font-size: 2.2rem;
+    }
+
+    .testimonialsHeading.testHeading h2,
+    .workMotto p {
+        font-size: 2.2rem;
+    }
+
+    .testimonialText.rightTestimonial {
+        height: 85%;
+        margin-top: 4.5rem;
+    }
+    
+}
 
 
 
@@ -645,13 +683,17 @@ main p {
     margin: 0 1.25rem;
 }
 
+.testimonialPerson {
+    width: 90%;
+}
+
 .testimonialsLeft,
 .contactLeft {
     display: flex;
     justify-content: space-between;
     margin-left: 1.25rem;
     padding-top: 1.875rem;
-    width: 50%;
+    width: 60%;
 }
 
 
@@ -670,11 +712,10 @@ main p {
 
 .testimonial {
     width: 50%;
-    height: 36rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center; 
     
 }
 
@@ -690,9 +731,8 @@ main p {
 }
 
 .rightTestimonial {
-    height: 69%;
     padding-bottom: 1.5625rem;
-    margin-bottom: 4.375rem;
+    margin: 4.5rem 0 4.375rem 0;
 
 }
 
@@ -797,6 +837,8 @@ main p {
     width: 66.66%;
 }
 
+
+
 .fbDetails {
     width: 100%;
 }
@@ -807,11 +849,11 @@ main p {
     width: 100%;
 }
 
-.fbDetails[open] .facebookMain {
-    top: 0;
+.bpSummary {
+    list-style-type: none;
+    display: block;
     width: 100%;
 }
-
 
 .coverSection {
     display: flex;
@@ -840,8 +882,8 @@ main p {
 }
 
 .smicon img {
-    width: 100px;
-    height: 100px;
+    width: 5svw;
+    height: 5svw;
     margin-right: 1.25rem;
 }
 
@@ -854,6 +896,7 @@ main p {
 .workContainerRight {
     width: 66.66%;
     margin-left: .625rem;
+    position: relative;
 }
 
 
@@ -874,6 +917,8 @@ main p {
 
 .facebookCover {
     height: 41.5625rem;
+    width: 100%;
+    position: relative;
     background-image: url("../images/work/fbcover.png");
     background-size: cover;
     margin-bottom: .625rem;
@@ -886,20 +931,60 @@ main p {
     background-image: url("../images/work/bpcover.png");
     background-size: cover;
     align-items: flex-end;
+    position: relative;
+    width: 100%;
 }
 
+@media (max-width: 1200px) {
+    .instagramCover {
+        height: 73rem;
+    }
+    .facebookCover,
+    .blogCover {
+        height: 36.2rem;
+    }
+    #instagramMain {
+        height: 71.75rem;
+    }
+    .facebookMain iframe {
+        width: 40%;
+    }
+    .facebookMain .iframeLast {
+        margin: -245px 0 0 80px;
+    }  
+    .contactsHeading h2 {
+        font-size: 2.2rem;
+    }
+    
+}
+
+@media (max-width: 1217px) {
+    .bpDetails .blogMain {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 4.5rem;
+    }
+    .blogMain .blogContainer {
+        width: 80%;
+    }
+    .contactInfoLeft .contactText {
+        font-size: .9rem;
+    }
+}
 
 .instagramMain {
     display: flex;
     flex-direction: column;
     transition: all 0.5s ease;
     position: absolute;
-    bottom: 0;
     left: 33.33%;
+    bottom: 0;
     width: 66.66%;
     background-color: #000000ab;
-    z-index: 10;
-    padding: .7rem 0;
+    z-index: 11;
+    padding-top: 1.25rem;
+    height: 82.5rem;
 }
 
 .instagramInfo {
@@ -984,6 +1069,16 @@ main p {
    flex-wrap: wrap;
 }
 
+.facebookMain {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    background-color: #000000ab;
+    width: 100%;
+    height: 50%;
+}
+
+
 .iframeTop{
     display: flex;
     justify-content: space-around;
@@ -998,6 +1093,63 @@ iframe {
     margin: -180px 0 0 110px;
 }
 
+.instagramMain,
+.facebookMain,
+.blogMain {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+details[open] .instagramMain,
+details[open] .facebookMain,
+details[open] .blogMain{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease;
+}
+
+.instagramMain, .facebookMain,
+.blogMain {
+    overflow: hidden;
+}
+
+.blogMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    position: absolute;
+    bottom: 50%;
+    height: 50%;
+    background-color: #000000ab;
+    align-items: center;
+}
+
+.blogContainer {
+    font-size: .9rem;
+    text-align: center;
+    border: 1px solid gainsboro;
+    margin: 10px 0;
+}
+
+.blogMain img {
+    width: 65%;
+    margin: 10px 0 10px 0;
+}
+
+.blogMain p {
+    padding-bottom: 10px;
+    
+}
+
+a .blogContainer {
+    color: #fff;
+}
+
+a .blogContainer:hover {
+    opacity: .8;
+}
 
 
 /* CONTACT SECTION */
@@ -1014,7 +1166,7 @@ iframe {
 
 .contactsHeading {
     font-family: "Lato", sans-serif;
-    margin: 6.25rem;
+    margin: 1.25rem;
     opacity: 0;
 }
 
@@ -1038,7 +1190,7 @@ iframe {
 .contactText {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 70%;
     border-top: 1px solid gainsboro;
     margin-bottom: 1.5625rem;
 }
@@ -1102,12 +1254,13 @@ textarea {
 }
 
 .formButton {
-    width: 15%;
+    width: 20%;
     margin-top: 1.5625rem;
     align-self: flex-end;
     margin-bottom: 0;
     color: gainsboro;
     border-bottom: 1px solid gainsboro;
+    text-align: center;
 }
 
 
@@ -1143,7 +1296,7 @@ footer a,
 
 .footerTop {
     background-color: #000;
-    height: 29.375rem;
+    height: 26rem;
     color: white;
     font-family: "Open Sans", sans-serif;
     letter-spacing: .03em;
@@ -1191,8 +1344,22 @@ footer a,
     background-color: #000;
     color: #fff;
 }
+.galleryFooter {
+    margin-top: 1.25rem;
+}
 
 
+@media (max-width: 1218px) {
+    .footerTop{
+        height: 23rem;
+    }
+    .footerLeft .footerLinks {
+        font-size: 1.3rem;
+    }
+    .rights {
+        font-size: .7rem
+    }
+}
 
 
 
