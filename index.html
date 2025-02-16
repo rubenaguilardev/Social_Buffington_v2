@@ -35,17 +35,19 @@
     </main>
     
     
-    <div id="about"></div> 
-    <p class="aboutTitle">Who am I?</p>
-    <div class="aboutHeading animate">
-        <h2>
-            Hey there, I'm <span>Jazmin Buffington</span>, a dynamic marketing guru with a passion for creativity and innovation. 
-            With over a decade of experience under my belt, I specialize in all things social media, digital marketing, 
-            photography and epic event planning. 
-        </h2>
-    </div>
+    <div id="about" class="aboutHeader animate">
+        <p class="aboutTitle">Who am I?</p>
+        <div class="aboutHeading animate">
+            <h2>
+                Hey there, I'm <span>Jazmin Buffington</span>, a dynamic marketing guru with a passion for creativity and innovation. 
+                With over a decade of experience under my belt, I specialize in all things social media, digital marketing, 
+                photography and epic event planning. 
+            </h2>
+        </div>
+    </div> 
     
-    <section class="about" >
+    
+    <section class="about animate" >
         <div class="aboutLeft">
             <img src="images/profile.jpg" alt="profile picture">
                  
@@ -74,18 +76,18 @@
     
     
 
-    <section class="galleryHeading" id="gallery">
+    <section class="galleryHeading animate" id="gallery">
         <h2 class="galleryTitle">Gallery</h2>
         <a href="gallery.html"><button class="galleryButton">VIEW ALL</button> </a>   
     </section>
-    <div class="galleryMotto">
+    <div class="galleryMotto animate">
         <div class="mottoLeft"></div>
         <div class="mottoRight">
             <p>lorem ipsum decet ador</p>
             <p>dosum iban queses manen</p>
         </div>
     </div>
-    <section class="gallery">
+    <section class="gallery animate">
         <div class="galleryRow">
             <img src="images/gallery/1-1.jpg" alt="">
             <img src="images/gallery/1-2.jpg" alt=""> 
@@ -131,18 +133,18 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials animate">
         <div class="testimonialBorder"></div>
         <div class="testimonialsLeft">
             <p class="testimonialHeading">Testimonials</p>
-            <div class="testimonialsHeading animate">
+            <div class="testimonialsHeading">
                 <h2>Read what my colleagues</h2>
                 <h2>have to say</h2>
             </div>   
         </div>
         <div class="testimonialsRight"></div>     
     </section>
-    <section class="testimonialContainer">
+    <section class="testimonialContainer animate">
         <div class="testimonial one">
             <div class="testimonialText">
                 <p class="person"><a href="https://www.linkedin.com/in/greg-lutchko-77605b8?trk=public_profile_recommendations">Greg Lutchko</a></p>
@@ -179,20 +181,20 @@
         </div>
     </section>
 
-    <section class="workHeading" id="work">
+    <section class="workHeading animate" id="work">
         <h2 class="workTitle">My Work</h2>  
     </section>
-    <div class="galleryMotto">
+    <div class="galleryMotto animate">
         <div class="workMotto">
             <p>I amplify brands and share their</p>
             <p>stories with the world</p>
         </div>
     </div>
 
-    <section class="workContainer">
+    <section class="workContainer animate">
         <div class="workSection">
-            <details>
-                <summary>
+            <details class="igDetails">
+                <summary class="igSummary">
                     <div class="instagramCover coverSection" id="instagramCover">
                         <div class="smicon ig">
                             <img src="images/igicon.png" alt="">
@@ -249,12 +251,24 @@
             </details>
             
             <div class="workContainerRight">
-                <div class="facebookCover coverSection">
-                    <div class="smicon fb">
-                        <img src="images/fbicon.png" alt="">
-                        <h2>Facebook</h2>
-                    </div>
-                </div>
+                <details class="fbDetails">
+                    <summary class="fbSummary">
+                        <div class="facebookCover coverSection">
+                            <div class="smicon fb">
+                                <img src="images/fbicon.png" alt="">
+                                <h2>Facebook</h2>
+                            </div>
+                        </div>
+                    </summary>
+                    <section class="facebookMain">
+                        <div class="iframeTop">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FWyndhamGrandClearwaterBeach%2Fphotos%2Fa.389807901358320%2F2006859079653186%2F%3Ftype%3D3&show_text=false&width=500" width="500" height="333" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe class="iframeFirst" src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FRobbinsBrothers%2Fvideos%2F10154480287967836%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>        
+                        </div>
+                        <iframe class="iframeLast" src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FRobbinsBrothers%2Fvideos%2F10154289881512836%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                    </section> 
+                </details>
+                
             
                 <div class="blogCover coverSection">
                     <div class="smicon bp">
@@ -273,31 +287,21 @@
         
        
 
-            <!-- <section class="facebookMain">
-                <div class="facebookTop">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FWyndhamGrandClearwaterBeach%2Fphotos%2Fa.389807901358320%2F2006859079653186%2F%3Ftype%3D3&show_text=false&width=500" width="500" height="333" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    <iframe class="iframeFirst" src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FRobbinsBrothers%2Fvideos%2F10154480287967836%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-
-                    <iframe class="iframeRight" src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FRobbinsBrothers%2Fvideos%2F10154289881512836%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                </div>
-
-                
-            </section>  -->
             
-    </section>
+            
         </div>
+    </section>
 
-
-    <section class="contactContainer" id="contact">
+    <section class="contactContainer animate" id="contact">
         <div class="contactBorder"></div>
         <div class="contactLeft">
             <p class="contactHeading">Contact</p>
-            <div class="contactsHeading animate">
+            <div class="contactsHeading">
                 <h2>Get in touch</h2>               
             </div>   
         </div>
         <div class="contactRight"></div>
-        <div class="contactInfo">
+        <div class="contactInfo animate">
             <div class="contactInfoLeft">
                 <div class="contactText">
                     <p>Social</p>
@@ -315,9 +319,9 @@
             <div class="contactInfoRight">
                 <form action="#">
                     <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio eum atque itaque</h2>
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
-                    <input class="message" type="text" placeholder="Your message">
+                    <input type="text" maxlength="30px" placeholder="Your Name">
+                    <input type="email" maxlength="30px" placeholder="Your Email">
+                    <textarea name="message" cols="40" rows="6" id="message" placeholder="Your Message"></textarea>
                     <input class="formButton" type="SUBMIT">
                 </form>
             </div>

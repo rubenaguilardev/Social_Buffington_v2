@@ -150,13 +150,23 @@ main p {
 
 /* ABOUT SECTION */
 
+.aboutHeader {
+    position: relative;
+    z-index: 3;
+}
+
 
 .aboutTitle {
     font-size: 1rem;
     line-height: 120%;
-    margin: 2.5rem 0 0 1.25rem;
+    margin: 8rem 0  0 1.25rem;
     z-index: 3;
     position: relative;
+}
+
+.aboutHeader.inView,
+.about.inView {
+    animation: fadeIn 1s ease-in forwards;
 }
 
 .aboutHeading {
@@ -171,21 +181,6 @@ main p {
     margin: -1.456rem 1.25rem 6.25rem 1.25rem;
     line-height: 110%;
     letter-spacing: .03em;
-    
-    opacity: 0;
-}
-
-.aboutHeading.inView {
-    animation: 2.5s fadeIn forwards;
-}
-
-@keyframes fadeIn{
-    0% {
-        opacity: 0;
-    }
-
-    100% { 
-    opacity: 1;}
 }
 
 .aboutTitle,
@@ -212,6 +207,11 @@ main p {
 .aboutLeft > img {
     width: 75%;
     animation: fade-in linear;
+    opacity: 1;
+}
+
+.aboutLeft img.inView {
+    animation: 1.5s fadeIn ease-in;
 }
 
 .aboutRight {
@@ -414,7 +414,17 @@ main p {
 
 .galleryMotto {
     display: flex;
+    position: relative;
+    z-index: 3;
 }
+
+.galleryHeading.inView,
+.galleryMotto.inView,
+.galleryButton.inView,
+.gallery.inView {
+    animation: fadeIn 1s ease-in forwards;
+}
+
 
 .mottoLeft,
 .workRight {
@@ -450,6 +460,7 @@ main p {
 }
 
 @keyframes fadein {
+    0% { opacity: 0; }
     100% {
         opacity: 1;
     }
@@ -615,26 +626,11 @@ main p {
     
 }
 
-.testimonialsHeading {
-    
-    opacity: 0;
-}
 
-.testimonialsHeading.inView {
-    animation: 2.5s fadeIn forwards;
+.testimonials.inView,
+.testimonialContainer.inView {
+    animation: fadeIn 1s ease-in forwards;
 }
-
-@keyframes fadeIn {
-    0% {
-        
-        opacity: 0;
-    }
-    100% {
-        
-        opacity: 1;
-    }
-}
-
 
 .testimonialHeading,
 .contactHeading {
@@ -771,6 +767,12 @@ main p {
     width: 100%;
 } 
 
+.workHeading.inView,
+.workMotto.inView,
+.workContainer.inView {
+    animation: fadeIn 1s ease-in forwards;
+}
+
 
 
 .workSection {
@@ -779,22 +781,36 @@ main p {
     position: relative;
 }
 
-details {
+.igDetails {
     width: 33.33%;
 }
 
-details summary {
+.igSummary {
     list-style-type: none;
     display: block;
     width: 100%;
     background-color: #000;
 }
 
-details[open] .instagramMain {
+.igDetails[open] .instagramMain {
     left: 33.33%;
     width: 66.66%;
 }
 
+.fbDetails {
+    width: 100%;
+}
+
+.fbSummary {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+}
+
+.fbDetails[open] .facebookMain {
+    top: 0;
+    width: 100%;
+}
 
 
 .coverSection {
@@ -962,23 +978,25 @@ details[open] .instagramMain {
     color: #fff;
 }
 
-
-
 .instagramItemList::-webkit-scrollbar {
    display: none;
    justify-content: space-between;
    flex-wrap: wrap;
 }
 
-.facebookMain {
-    display: none;
-    margin: 1.25rem 1.25rem 0 1.25rem;
+.iframeTop{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.25rem;
 }
 
-.facebookTop {
-    width: 100%;
+iframe {
+    width: 35%;
 }
 
+.iframeLast {
+    margin: -180px 0 0 110px;
+}
 
 
 
@@ -993,10 +1011,6 @@ details[open] .instagramMain {
     line-height: 130%;
 }
 
-.contactHeading {
-    font-weight: 600;
-   
-}
 
 .contactsHeading {
     font-family: "Lato", sans-serif;
@@ -1004,20 +1018,12 @@ details[open] .instagramMain {
     opacity: 0;
 }
 
-.contactsHeading.inView {
-    animation: 1.2s slideforward forwards;
+.contactContainer.inView,
+.contactInfo.inView,
+.contactsHeading {
+    animation: fadeIn 1s ease-in forwards;
 }
 
-@keyframes slideforward {
-    0% {
-        margin: 6.25rem;
-        opacity: 0;
-    }
-    100% {
-        margin: 0;
-        opacity: 1;
-    }
-}
 
 .contactInfo {
     display: flex;
@@ -1080,13 +1086,19 @@ form input {
     background-color: #000;
     color: gainsboro;
     font-size: 1.2rem;
-    padding: 1.25rem 0 .3125rem 0;
+    padding: 1rem 0 .3125rem .4rem;
     margin-bottom: 1.25rem;
     outline: none;
 }
 
-.message {
-    height: 100px;
+textarea {
+    background-color: #000;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 2rem;
+    padding: 1.5rem 0 0 .4rem;
+    color: #fff;
+    margin-bottom: .5rem;
 }
 
 .formButton {
@@ -1094,6 +1106,8 @@ form input {
     margin-top: 1.5625rem;
     align-self: flex-end;
     margin-bottom: 0;
+    color: gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
