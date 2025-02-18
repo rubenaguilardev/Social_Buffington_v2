@@ -40,11 +40,10 @@ span {
     left: 50%;
     transform: translateX(-50%);
     margin: 0 auto;
-    background-color: #2424244d;
+    background-color: #000000ab;
     opacity: 0;
     animation: fadeIn 0.8s ease-in forwards;
     transition: background-color .5s ease, opacity 0.5s ease;
-    backdrop-filter: blur(2rem);
     z-index: 9999;
     border-radius: 3px;
     padding: .625rem 1.25rem;
@@ -113,7 +112,6 @@ main p {
     padding: 0 1.25rem 0 0;
     opacity: 1;
     margin-right: -100vw;
-    margin-bottom: 3.125rem;
     font-weight: 600;
     font-family: "Open Sans", sans-serif;
     animation: slidefade 3s forwards;
@@ -137,10 +135,12 @@ main p {
     width: calc(100% - 2.5rem);
     margin-right: 1.25rem;
     padding-bottom: 5.625rem;
+    text-align: center;
 }            
 
 .logoContainer img{
     width: 100%;
+    max-width: 1440px;
 }
 
 
@@ -149,6 +149,11 @@ main p {
 
 
 /* ABOUT SECTION */
+
+.aboutSection {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 .aboutHeader {
     position: relative;
@@ -345,8 +350,6 @@ main p {
     opacity: 1;
 }
 
-
-
 .skillsText {
     font-size: 3rem;
     letter-spacing: .03rem; 
@@ -369,11 +372,6 @@ main p {
         margin-top: 3.75rem;
     }
 }
-
-
-
-
-
 
 .skillButtonContainer {
     align-self: center;
@@ -442,7 +440,8 @@ main p {
 
 .galleryTitle,
 .workTitle {
-    font-size: 12svw;
+    
+    font-size: 10rem;
     margin-left: -.3125rem;
 }
 
@@ -601,6 +600,7 @@ main p {
 
 
 
+
 /* EXPERTISE SECTION */
 
 .expertiseCarousel {
@@ -623,7 +623,6 @@ main p {
 .expertiseCarousel p {
     margin-bottom: 2.5rem;
 }
-
 
 .expertiseCarousel .carouselInner {
     width: max-content;
@@ -656,14 +655,16 @@ main p {
 
 
 
+
+
 /* TESTIMONIAL SECTION */
 
-.testimonials {
+.testimonialSection {
+    max-width: 1440px;
+    margin: 0 auto;
     position: relative;
     z-index: 3;
-    
 }
-
 
 .testimonials.inView,
 .testimonialContainer.inView {
@@ -696,7 +697,6 @@ main p {
     width: 60%;
 }
 
-
 .testimonialsLeft h2,
 .contactLeft h2 {
     font-size: 2.8rem;
@@ -706,7 +706,6 @@ main p {
 .testimonialContainer {
     display: flex;
     position: relative;
-    z-index: 3;
     margin: 3.125rem 1.25rem 9.375rem 1.25rem;
 }
 
@@ -755,18 +754,11 @@ main p {
     line-height: 130%;
 }
 
-
-
-
-
-
-
 .testimonial.one {
     background-image: url("../images/testimonials/1.png");
     background-position: bottom;
     background-size: cover;
     margin-right: 1.25rem;
-
 }
 
 .testimonial.two {
@@ -837,8 +829,6 @@ main p {
     width: 66.66%;
 }
 
-
-
 .fbDetails {
     width: 100%;
 }
@@ -891,15 +881,12 @@ main p {
     font-size: 5svw;
 }
 
-
-
 .workContainerRight {
     width: 66.66%;
     margin-left: .625rem;
     position: relative;
+    
 }
-
-
 
 .instagramCover {
     width: 100%;
@@ -963,7 +950,7 @@ main p {
         flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
-        padding-left: 4.5rem;
+        padding-left: 2.3rem;
     }
     .blogMain .blogContainer {
         width: 80%;
@@ -1031,9 +1018,6 @@ main p {
     margin-left: 50%;
 }
 
-
-
-
 .instagramItemList {
    display: flex;
    scroll-behavior: smooth;
@@ -1077,7 +1061,6 @@ main p {
     width: 100%;
     height: 50%;
 }
-
 
 .iframeTop{
     display: flex;
@@ -1124,6 +1107,7 @@ details[open] .blogMain{
     height: 50%;
     background-color: #000000ab;
     align-items: center;
+    width: 100%;
 }
 
 .blogContainer {
@@ -1152,17 +1136,19 @@ a .blogContainer:hover {
 }
 
 
+
+
 /* CONTACT SECTION */
 
 .contactContainer {
     position: relative;
     z-index: 3;
-    margin-bottom: 9.375rem;
     font-family: "Open Sans", sans-serif;
     letter-spacing: .03rem;
     line-height: 130%;
+    max-width: 1440px;
+    margin: 0 auto 9.375rem auto;
 }
-
 
 .contactsHeading {
     font-family: "Lato", sans-serif;
@@ -1175,7 +1161,6 @@ a .blogContainer:hover {
 .contactsHeading {
     animation: fadeIn 1s ease-in forwards;
 }
-
 
 .contactInfo {
     display: flex;
@@ -1265,7 +1250,13 @@ textarea {
 
 
 
+
+
 /* FOOTER */
+
+.footerSection {
+    background-color: #000;
+}
 
 footer {
     display: flex;
@@ -1275,6 +1266,8 @@ footer {
     z-index: 3;
     background-color: #000;
     color: #fff;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 footer a,
@@ -1300,6 +1293,8 @@ footer a,
     color: white;
     font-family: "Open Sans", sans-serif;
     letter-spacing: .03em;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .footerTop p {
@@ -1345,7 +1340,7 @@ footer a,
     color: #fff;
 }
 .galleryFooter {
-    margin-top: 1.25rem;
+    margin-top: 1.5rem;
 }
 
 
