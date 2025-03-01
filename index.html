@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Buffington</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
@@ -19,7 +19,7 @@
             <li class="closeOnClick"><a href="#contact">Contact</a></li>
         </ul>
          <ul>
-            <li><a href="#">Social Buffington</a></li>
+            <li><a href="#"><img src="images/logo.png" alt=""></a></li>
             <li class="hiddenOnMobile"><a href="#about">About</a></li>
             <li class="hiddenOnMobile"><a href="#gallery">Gallery</a></li>
             <li class="hiddenOnMobile"><a href="#work">My Work</a></li>
@@ -211,15 +211,13 @@
         <section class="instagramDropDown instagramHidden">
             <div class="instagramDropDownLeft">
                 <div class="instagramDropDownTop">
-                    <img src="images/work/instagrampost1.jpg" alt="">
                     <p>
-                        The team at Wyndham Grand Clearwater Beach entrusted Jazmin with the task of presenting a more authentic and captivating representation of its unique guest experiences across social channels.
+                        The team at <span>Wyndham Grand Clearwater Beach</span> entrusted Jazmin with the task of presenting a more authentic and captivating representation of its unique guest experiences across social channels.
                         As a result of Jazmin's monthly efforts, there has been a notable surge in organic engagements (+209%), audience (+51%), and impressions (+178%) for Instagram from April 2023 to May 2024 in comparison to the previous year.
                     </p>
                 </div>
                <div class="instagramDropDownBottom">
-                <p>The Margaritaville Palm Springs team expressed a desire to boost their organic follower base. Jazmin successfully increased their followers by 50% within a span of 20 months.</p>
-                <img src="images/work/instagrampost2.png" alt="">
+                <p>The <span>Margaritaville Palm Springs</span> team expressed a desire to boost their organic follower base. Jazmin successfully increased their followers by 50% within a span of 20 months.</p>
                </div>
             </div>
             <div class="instagramDropDownRight">
@@ -283,34 +281,43 @@
     </section>
 
     <section class="contactContainer animate" id="contact">
-        <div class="contactBorder"></div>
-        <div class="contactLeft">
+        <div class="contactBorder">
             <p class="contactHeading">Contact</p>
-            <div class="contactsHeading">
-                <h2>Get in touch</h2>               
-            </div>   
         </div>
+        <div class="contactHeading">
+            <div class="contactLeft"></div>
+        <div class="contactRight">
+            <h2>Get in touch</h2>               
+        </div>
+        </div>
+        
 
         <section class="contactFormContainer">
             <div class="contactFormLeft">
                 <h2>Jazmin Buffington</h2>
                 <div class="socialMediaIcons">
-                    <img src="images/linkedinwhite.png" alt="">
-                <img src="images/gmailwhite.png" alt="">
+                    <img class="smiconLeft" src="images/linkedinlogo.png" alt="">
+                    <img src="images/gmaillogo.png" alt="">
                 </div>
                 <p>Los Angeles, CA</p>
             </div>
-            <div class="contactFormRigth">
+            <div class="contactFormRight">
                 <form action="mailto:ragui56@wgu.edu" method="post" enctype="text/plain">
-                    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio eum atque itaque</h2>
-                    <input type="text" maxlength="30px" placeholder="Your Name">
-                    <input type="email" maxlength="30px" placeholder="Your Email">
+                    <h2>If you want to get in touch you can email me at <span>jazming.a.buffington@gmail.com</span>, connect on Linkedin, or fill out the form bellow.</h2>
+                    <div class="nameEmailInput">
+                        <input class="inputLeft" type="text" maxlength="30px" placeholder="Your Name">
+                        <input type="email" maxlength="30px" placeholder="Your Email">
+                    </div> 
                     <textarea name="message" cols="40" rows="6" id="message" placeholder="Your Message"></textarea>
                     <input class="formButton" type="SUBMIT" value="Send">
                 </form>
             </div>
         </section>
     </section>
+
+    <footer>
+        <h2>Digital Marketing · Social Media · Photography · Event Planning</h2>
+    </footer>
 
 
     <script src="js/app.js"></script>
