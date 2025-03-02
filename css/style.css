@@ -123,7 +123,7 @@ nav li:first-child {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    background-image: url("../images/Untitled.png");
+    background-image: url("../images/cover.png");
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -131,7 +131,7 @@ nav li:first-child {
 }
 
 .mainH1 {
-    font-size: 6.3svw;
+    font-size: 6svw;
     letter-spacing: .03em;
     line-height: 1.2;
     margin: 0 1.25rem;
@@ -891,16 +891,14 @@ nav li:first-child {
     letter-spacing: .03em;
 }
 
-.testimonialBorder,
-.contactBorder {
+.testimonialBorder {
     height: 9.375rem;
     border-bottom: 1px solid gainsboro;
 }
 
 
 
-.testimonialsLeft,
-.contactLeft {
+.testimonialsLeft {
     display: flex;
     justify-content: space-between;
     margin-left: 1.25rem;
@@ -1010,10 +1008,6 @@ nav li:first-child {
     animation: fadeIn 1s ease-in forwards;
 }
 
-.workSections {
-    background-color: #000;
-}
-
 .workSections h3 {
     font-size: 2.8rem;
     color: #fff;
@@ -1036,14 +1030,14 @@ nav li:first-child {
     background-size: cover;
     background-position: bottom;
     padding: 3rem 1.25rem;
-    margin-bottom: .375rem;
+    border-bottom: 1px solid gainsboro;
 }
 
 .instagramDropDown {
     width: 100%;
     display: flex;
     flex: 1;
-    margin-bottom: .375rem;
+    border-bottom: 1px solid gainsboro;
     background: linear-gradient(to right, #6e39dad0, #eb3681e8, #f88316da);
 
 }
@@ -1087,9 +1081,9 @@ nav li:first-child {
 
 .instagramDropDownTop p,
 .instagramDropDownBottom p {
-    background-color: #ffffffd2;
+    background-color: #000000ab;
     padding: 1.25rem 1.5rem;
-    color: #000;
+    color: #fff;
     /* align-self: flex-end; */
 }
 
@@ -1148,7 +1142,7 @@ nav li:first-child {
     background-position: center;
     background-size: cover;
     padding: 3rem 1.25rem;
-    margin-bottom: .375rem;
+    border-bottom: 1px solid gainsboro;
 }
 
 .facebookMain {
@@ -1158,7 +1152,7 @@ nav li:first-child {
     justify-content: center;
     align-items: center;
     padding: 1.25rem;
-    margin-bottom: .375rem;
+    border-bottom: 1px solid gainsboro;
     background: linear-gradient(to right, #fff, #00C6FF, #009CFF, #0073ffcc);
 }
 
@@ -1181,7 +1175,8 @@ iframe:nth-child(1) {
     background-image: url("../images/work/blogs.png");
     background-position: center;
     background-size: cover;
-    padding: 3rem 1.25rem;
+    padding: 3rem 1.25rem ;
+    border-bottom: 1px solid gainsboro;
 }
 
 .blogDropDown {
@@ -1192,7 +1187,6 @@ iframe:nth-child(1) {
     line-height: 130%;
     text-align: center;
     padding: 1.25rem;
-    margin-top: .375rem;
     background: linear-gradient(to right, #8E8E8B, #A8A7A4, #C1C1BD, #F4F3EE);
 }
 
@@ -1218,16 +1212,47 @@ iframe:nth-child(1) {
 /* CONTACT SECTION */
 
 .contactContainer {
-   
+background-color: #fff;
+color: #000;
+}
+
+.contactBorder {
+    background-color: #fff;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid gainsboro;
+    margin: 150px 0 30px 0;
+}
+
+.contactBorder p {
+    font-size: 7rem;
+    margin-left: 1.25rem;
+
 }
 
 .contactFormContainer {
-    background-color: #000;
+    background-color: #fff;
     color: #fff;
     display: flex;
     flex: 1;
-    margin: 5rem 1.25rem 8.75rem 1.25rem;
+    margin: 5rem 0 0 0;
+    padding-bottom: 8.75rem;
     letter-spacing: .03em;
+}
+
+.contactHeading {
+    display: flex;
+}
+
+.contactLeft {
+    width: 40%;
+}
+
+.contactRight {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    font-size: 2.3rem;
 }
 
 .contactFormLeft {
@@ -1236,7 +1261,10 @@ iframe:nth-child(1) {
     justify-content: center;
     align-items: center;
     width: 40%;
-    background: linear-gradient(to right, #525252, #3f3f3f, #222222, #000000 );
+    background-image: url("../images/contact.png");
+    background-size: cover;
+    background-position: bottom;
+    /* margin-left: 1.25rem; */
 }
 
 .contactFormLeft h2 {
@@ -1260,6 +1288,7 @@ iframe:nth-child(1) {
     display: flex;
     justify-content: center;
     width: 60%;
+    background-color: #000;
 }
 
 
@@ -1315,6 +1344,12 @@ textarea {
     width: 15%;
     font-size: .875rem;
 }
+
+
+
+/* FOOTER */
+
+
 
 
 

@@ -1,6 +1,34 @@
+let sidebarAccess = document.querySelector(".sidebarAccess");
+
+sidebarAccess.addEventListener('click', showSidebar);
+
+function showSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';
+
+    
+}
+
+let sidebarClose = document.querySelector('.sidebarClose');
+
+sidebarClose.addEventListener('click', hideSidebar);
+
+
+function hideSidebar() {
+    let sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none';
+
+}
+
+/* MAIN SECTION */
+
 const background = document.getElementById("main");
 
 window.addEventListener("scroll", function() {
+
+    if (window.innerWidth < 850) {
+        return;
+    }
 
     let newSize = 120 - window.pageYOffset / 28;
 
@@ -11,6 +39,8 @@ window.addEventListener("scroll", function() {
 });
 
 
+
+/* SKILLS SECTION */
 
 let backgroundImage = document.querySelector(".skills");
 let skillsText = document.querySelector(".skillsText");
@@ -44,7 +74,6 @@ function changeSkillsSection() {
 
     index = (index + 1) % images.length;
 }
-
 
 function resetBreathingAnimation() {
     backgroundImage.style.animation = 'none';
@@ -81,24 +110,8 @@ function skillButton() {
     skillsButtons[0].classList.add("skillButtonActive");
 }
 
-
 interval = setInterval(changeSkillsSection, 8000);
 skillButton();
-
-
-const instagramPrev = document.getElementById("instagramPrevBtn");
-const instagramNext = document.getElementById("instagramNextBtn");
-const list = document.getElementById("instagramItemList");
-const itemWidth = 340;
-const padding = 10;
-
-instagramPrev.addEventListener('click', function() {
-    list.scrollLeft -= (itemWidth + padding); 
-});
-
-instagramNext.addEventListener('click', function() {
-    list.scrollLeft += (itemWidth + padding);
-});
 
 
 
@@ -143,6 +156,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
+/* INSTAGRAM SECTION */
+
+let igAccess = document.querySelector('.igAccess');
+igAccess.addEventListener('click', function() {
+
+    let igOpen = document.querySelector(".instagramHidden");
+    if (igOpen.style.display === 'flex') {
+        igAccess.innerHTML = '<path d="M480-360 280-559.33h400L480-360Z"/>'
+        igOpen.style.display = 'none';
+    } else{
+        igAccess.innerHTML = '<path d="m280-400 200-200.67L680-400H280Z"/>'
+        igOpen.style.display = 'flex';
+    } 
+});
+
+const instagramPrev = document.getElementById("instagramPrevBtn");
+const instagramNext = document.getElementById("instagramNextBtn");
+const list = document.getElementById("instagramItemList");
+const itemWidth = 340;
+const padding = 10;
+
+instagramPrev.addEventListener('click', function() {
+    list.scrollLeft -= (itemWidth + padding); 
+});
+
+instagramNext.addEventListener('click', function() {
+    list.scrollLeft += (itemWidth + padding);
+});
+
+
+/* FACEBOOK SECTION */
+
+let fbAccess = document.querySelector('.fbAccess');
+fbAccess.addEventListener('click', function() {
+
+    let fbOpen = document.querySelector(".facebookHidden");
+    if (fbOpen.style.display === 'flex') {
+        fbAccess.innerHTML = '<path d="M480-360 280-559.33h400L480-360Z"/>'
+        fbOpen.style.display = 'none';
+    } else{
+        fbAccess.innerHTML = '<path d="m280-400 200-200.67L680-400H280Z"/>'
+        fbOpen.style.display = 'flex';
+    }
+    
+});
+
+
+/* BLOG SECTION */
+
+let blogAccess = document.querySelector('.blogAccess');
+blogAccess.addEventListener('click', function() {
+
+    let blogOpen = document.querySelector(".blogHidden");
+    if (blogOpen.style.display === 'flex') {
+        blogAccess.innerHTML = '<path d="M480-360 280-559.33h400L480-360Z"/>'
+        blogOpen.style.display = 'none';
+    } else{
+        blogAccess.innerHTML = '<path d="m280-400 200-200.67L680-400H280Z"/>'
+        blogOpen.style.display = 'flex';
+    }
+    
+});
+
+
+
+/* ANIMATION */
 
 document.addEventListener("DOMContentLoaded", () => {
 
