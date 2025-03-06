@@ -290,81 +290,6 @@ nav li:first-child {
         transition-duration: 0.1s;
 }
 
-@media (max-width: 1264px) {
-    .aboutHeader {
-        font-size: 2.35rem;
-    }
-    .aboutRight {
-        font-size: 1.7rem;
-    }
-}
-
-@media (max-width: 1145px) {
-    .aboutHeader {
-        margin: 5rem 10%;
-        font-size: 2.25rem
-    }
-    .aboutRight {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 960px) {
-    .aboutHeader {
-        font-size: 2.1rem;
-    }
-    .aboutRight {
-        font-size: 1.25rem;
-    }
-    .contactButton {
-        padding: .6rem 1.1rem;
-        font-size: .7rem;
-    }
-}
-
-@media (max-width: 850px) {
-    .aboutHeader {
-        font-size: 1.7rem;
-    }
-    .aboutRight {
-        font-size: 1.1rem;
-    }
-    .contactButton { 
-        padding: .575rem 1rem; 
-    }
-}
-
-@media (max-width: 480px) {
-    .aboutHeader{
-        margin: 3rem 1rem 2rem 1rem;
-        font-size: 1.4rem;
-        text-align: left;
-    }
-    .about {
-        flex-direction: column;
-        margin: 0;
-    }
-
-    .aboutLeft {
-        margin: 0 1rem 2rem 1rem;
-    }
-  
-    .aboutLeft img {
-        width: 100%;
-    }
-    .aboutRight {
-        margin: 0 1rem 6rem 1rem;
-    }
-    .aboutBottomP {
-        margin-bottom: 1.8rem;
-    }
-    .contactButton {
-        width: 100%;
-        background-color: #12bbf3;
-        font-size: 1rem;
-        padding: 1rem 1.25rem;
-    }
-}
 
 
 
@@ -378,7 +303,7 @@ nav li:first-child {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 44rem;
+    max-height: 50rem;
     z-index: 3;
     position: relative;
     background-color: #000;
@@ -417,7 +342,7 @@ nav li:first-child {
     max-width: 50%;
     color: #000;
     align-self: flex-end;
-    padding-right: 1.25rem;    
+    padding: 0 1.25rem 50rem 0;    
 }
 
 .skillsTextSlideIn {
@@ -466,72 +391,6 @@ nav li:first-child {
     color: #fff;
 }
 
-@media (max-width: 1200px) {
-    .skillsText {
-        font-size: 2.4rem;
-    }
-}
-
-
-@media (max-width: 1064px) {
-    .skills {
-        height: 35rem;
-    }
-    .skillsText {
-        font-size: 2.1rem;
-    }
-}
-
-@media (max-width: 958px) {
-    .skills {
-        height: 30rem;
-    }
-    .skillsText {
-        font-size: 1.7rem;
-    }
-} 
-
-@media (max-width: 480px) {
-    .skills {
-        height: 24rem;
-        margin-bottom: 6rem;
-        background-image: url("../images/skills/0-mobile.png");
-    }
-    .skillsText {
-        width: 95%;
-        align-self: flex-start;
-        font-size: 1.4rem;
-        padding-left: 1rem;
-    }
-    .skillButton {
-        margin: 0 .3125rem 1rem 0;
-        background-color: #0303034d;
-        border-color: #0303034d;
-        color: #c9c6c6;
-        padding: .525rem 1rem;
-        font-size: 1.25rem; 
-    }
-    .skillButton:hover {
-        background-color: #12bbf3;
-        color: #fff;
-    }
-    
-    .skillButtonActive {
-        background-color: #12bbf3;
-        border-color: #12bbf3;
-        opacity: .9;
-        color: #fff;
-    }
-    @keyframes slide-in {
-        0% {
-            margin-top: 3rem;
-        }
-        
-        100% {
-            margin-top: 1rem;
-        }
-    }
-}
 
 
 
