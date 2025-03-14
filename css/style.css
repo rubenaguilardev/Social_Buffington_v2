@@ -882,7 +882,7 @@ nav li:first-child {
 }
 
 
-.instagramSection {
+/* .instagramSection {
     display: flex;
     justify-content: space-between;
     background-image: url("../images/work/instagram.png");
@@ -890,7 +890,7 @@ nav li:first-child {
     background-position: bottom;
     padding: 3rem 1.25rem;
     border-bottom: 1px solid gainsboro;
-}
+} */
 
 .instagramDropDown {
     width: 100%;
