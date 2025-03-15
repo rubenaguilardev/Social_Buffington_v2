@@ -882,7 +882,7 @@ nav li:first-child {
 }
 
 
-/* .instagramSection {
+.instagramSection {
     display: flex;
     justify-content: space-between;
     background-image: url("../images/work/instagram.png");
@@ -890,7 +890,7 @@ nav li:first-child {
     background-position: bottom;
     padding: 3rem 1.25rem;
     border-bottom: 1px solid gainsboro;
-} */
+} 
 
 .instagramDropDown {
     width: 100%;
@@ -1152,7 +1152,7 @@ color: #000;
 
 
 
-form {
+/* form {
     display: flex;
     flex-direction: column;
     padding: 5rem 2rem 3rem 2rem;
@@ -1183,7 +1183,7 @@ form input {
 }
 
 .inputLeft {
-    margin-right: 1.25rem;
+    margin-right: 1.25rem; */
 }
 
 textarea {
